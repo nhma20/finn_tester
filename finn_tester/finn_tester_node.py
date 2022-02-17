@@ -16,13 +16,13 @@ class FinnTesterNode(Node):
 		self.timer = self.create_timer(timer_period, self.timer_callback)
 		self.bridge = CvBridge()
 		self.i = 0
-		self.path = "/home/nm/test_images"
+		self.path = "/home/mp4d/test_images"
 		self.filenames = os.listdir(self.path)
 
 	def timer_callback(self):
 		filename = self.filenames[self.i]
 		# img = cv2.imread(os.path.join(self.path,filename),1)
-		img = cv2.imread(os.path.join(self.path,"000000000731.jpg"),1)
+		img = cv2.imread(os.path.join(self.path,"0000002989380.jpg"),1)
 		#img = cv2.resize(img, (256,256), interpolation = cv2.INTER_AREA)
 		msg = self.bridge.cv2_to_imgmsg(np.array(img), "bgr8")
 		msg.header.frame_id = "camera"
