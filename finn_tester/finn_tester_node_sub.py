@@ -19,9 +19,9 @@ class MinimalSubscriber(Node):
         self.subscription  # prevent unused variable warning
 
     def listener_callback(self, msg):
-		bridge = CvBridge()
+        bridge = CvBridge()
         img = bridge.imgmsg_to_cv2(msg)
-		cv2.imwrite("test_image.jpg", img)
+        cv2.imwrite("test_image.jpg", img)
 
 
 def main(args=None):
