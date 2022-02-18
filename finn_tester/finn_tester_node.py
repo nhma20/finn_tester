@@ -41,6 +41,7 @@ class FinnTesterNode(Node):
 		# img = cv2.imread(os.path.join(self.path,filename),1)
 		filename_a = self.img_names[self.i] + ".jpg"
 		img = cv2.imread(os.path.join(self.path, filename_a),1)
+		print(os.path.join(self.path, filename_a))
 		#img = cv2.resize(img, (256,256), interpolation = cv2.INTER_AREA)
 		msg = self.bridge.cv2_to_imgmsg(np.array(img), "bgr8")
 		msg.header.frame_id = "camera"
