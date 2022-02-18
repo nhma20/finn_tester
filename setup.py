@@ -23,6 +23,7 @@ setup(
     entry_points={
         'console_scripts': [
         	'finn_tester = finn_tester.finn_tester_node:main',
+        	'finn_tester_sub = finn_tester.finn_tester_node_sub:main',
         ],
     },
 )
